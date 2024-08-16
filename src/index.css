@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+:root{
+  color: #201E43;
+  background-color: white;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .aside-media{
+     display: none;
+  }
+  .main-media{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 700px) {
+  .aside-media{
+    display: none;
+  }
+  .divider-media{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .section-media{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 530px) {
+  .aside-media{
+    display: none;
+  }
+  .divider-media{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .section-media{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
